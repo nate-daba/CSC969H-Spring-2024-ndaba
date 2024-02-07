@@ -6,8 +6,9 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 1. [Paper 1](#paper-1)
 2. [Paper 2](#paper-2)
 
-### Paper 1
-Content for Paper 1...
+### Paper 1: [Approximate Bayesian Computation (ABC)] (https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable)
+
+TL;DR: Approximate Bayesian Computation (ABC) is a set of techniques for statistical inference without the need to explicitly compute the likelihood function.
 
 ### Paper 2
 Content for Paper 2...
