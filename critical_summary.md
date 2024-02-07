@@ -1,21 +1,32 @@
-<h1 align="center">Paper Summaries for CSC696H: Probabilistic Methods in Machine Learning</h1>
+# Paper Summaries for CSC696H: Probabilistic Methods in Machine Learning
 
-This is a collection of summary notes for papers assigned as weekly readings from the course CSC696H: Probabilistic Methods in ML, taught by [Prof. Jason Pacheco](https://link-to-professor-website.com) in Spring 2024. The purpose of these summaries is to critically engage with the material, demonstrating an understanding and critique of the papers. 
+This is a collection of summary notes for papers assigned as weekly readings from the course CSC696H: Probabilistic Methods in ML, taught by [Prof. Jason Pacheco](https://link-to-professor-website.com) in Spring 2024. The purpose of these summaries is to critically engage with the material, demonstrating an understanding and critique of the papers.
 
 ## Content
 
-1. [Paper 1](#paper-1) 
+1. [Approximate Bayesian Computation (ABC)](#paper-1)
 2. [Paper 2](#paper-2)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
-**TL;DR**: Approximate Bayesian Computation (ABC) is a set of techniques for statistical inference without the need to explicitly compute the likelihood function.
-#### Strengths
+**TL;DR**: Approximate Bayesian Computation (ABC) is a set of techniques for statistical inference that does not require the explicit computation of the likelihood function.
 
-#### Weaknesses
+### Strengths
 
-#### Discussion points
+The paper provides a clear explanation of the ABC rejection algorithm. It detailed how, given a prior distribution of model parameter θ, ABC can be used to estimate the posterior distribution of parameter values without explicitly evaluating the likelihood function. This estimated posterior can then, in turn, be used to estimate the most likely parameter θ given the data **D**. Figure 1 in the paper succinctly depicts this parameter estimation process. Moreover, it provides a simple and practical example that demonstrated how ABC could be used to approximate the posterior distribution in a bistable system characterized by a hidden Markov model (HMM) subject to measurement noise. The application of ABC beyond parameter estimation is also showcased, demonstrating how ABC is used to compute posterior probabilities of different models and compare the plausibilities of these models using their posterior ratios. Additionally, some common shortcomings of the ABC method and corresponding works that attempt to address these shortcomings are discussed.
 
+### Weaknesses
 
-### Paper 2
+In the topic regarding model comparison with ABC, it's not clear what "The relative acceptance frequencies for the different models can approximate the posterior distribution of theses models" exactly means. Does the "relative acceptance frequency" refer to the acceptance frequencies of parameters from models? Something akin to Figure 1 would have been great to explain this process.
+
+In the results depicted in Figure 3, the number of ABC simulations used for the cases of "ABC with ε = 0 and full data", "ABC with ε = 0 and summary statistic", and "ABC with ε = 2 and summary statistic" is not mentioned. This information is crucial for comparing and contrasting the results from the "worked example" case.
+
+### Discussion points
+
+* What are some other distance measures ρ that prior works have explored? Only Euclidean distance and absolute difference were mentioned as examples.
+* How do these distance measures work with different summary statistics **S**?
+* Is it possible to learn these distance metrics using modern methods such as deep metric learning?
+
+## Paper 2
+
 Content for Paper 2...
