@@ -5,7 +5,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 ## Content
 
 1. [Approximate Bayesian Computation (ABC)](#paper-1)
-2. [Paper 2](#paper-2)
+2. [Fast ε-free Inference of Simulation Models with Bayesian Conditional Density Estimation](#paper-2)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -27,6 +27,6 @@ In the results depicted in Figure 3, the number of ABC simulations used for the 
 * How do these distance measures work with different summary statistics **S**?
 * Is it possible to learn these distance metrics using modern methods such as deep metric learning?
 
-## Paper 2
+## Paper 2: [Fast ε-free Inference of Simulation Models with Bayesian Conditional Density Estimation](https://arxiv.org/pdf/1605.06376.pdf) <a name="paper-2"></a>
 
 Content for Paper 2...
