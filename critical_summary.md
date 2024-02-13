@@ -29,4 +29,24 @@ In the results depicted in Figure 3, the number of ABC simulations used for the 
 
 ## Paper 2: [Fast ε-free Inference of Simulation Models with Bayesian Conditional Density Estimation](https://arxiv.org/pdf/1605.06376.pdf) <a name="paper-2"></a>
 
-Content for Paper 2...
+**TL;DR**: The paper proposes a new approach to likelihood-free inference based on Bayesian conditional density estimation.
+
+### Strengths
+
+The paper does a good job of:
+* Describing prior work on inference methods for simulator-based models. E.g. Rejection ABC, MCMC-ABC, and SMC-ABC.
+* Pointing out some shortcomings of prior work. E.g. Noisy computation in representing parameter estimates as a set of samples, impracticality of simulations as ε-tolerance is reduced, etc
+* Proposing a parametric approach to likelihood-free inference to address the drawbacks of previous methods.
+* Providing a principled approach to learning the posterior p^hat(\theta | x = x_0)
+* Testing the proposed approach on various tasks. E.g. Mixture of two Gaussians, Bayesian linear regresstion, etc.
+
+### Improvements
+
+
+### Discussions points
+
+* In proposition 1 on page 2 of the paper, how would the proposition change if the set of pairs (\theta_n, \x_n) are not independent?
+* How does the proposed approach handle higher dimensional data (i.e for the case when dim(x) >> 10) which cna be common in many practical settings?
+
+
+
