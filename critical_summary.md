@@ -52,3 +52,13 @@ In the description of the results for the Lotka–Volterra predator-prey populat
 
 ## Paper 3: [Weight Uncertainty in Neural Networks](https://proceedings.mlr.press/v37/blundell15.pdf) <a name="paper-3"></a>
 
+**TL;DR**: The paper introduces an algorithm for learning a probability distribution on the weights of a neural network (NN), called Bayes by Backprop.
+### Strengths
+The paper begins by motivating the need for introducing uncertainty on the weights of a NN which is 1) plain feedforward NNs being prone to overfitting, and 2) NNs making overly confident decisions because of being unable to account for the uncertainty in the training data.
+
+### Improvements
+
+### Discussions points
+
+* While experimenting with the Bandits on Mushroom task, the reported number of times the weights are sampled from the learned posterior i.e. 2, seems a very small number to estimated the expected reward. Perhaps using a larger number of samples can offer better reward estimates and thus might result in faster convergence in terms of cumulative regret.
+* 
