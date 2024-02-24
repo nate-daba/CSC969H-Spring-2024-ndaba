@@ -8,6 +8,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 2. [Fast ε-free Inference of Simulation Models with Bayesian Conditional Density Estimation](#paper-2)
 3. [Weight Uncertainty in Neural Networks](#paper-3)
 4. [Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning](#paper-4)
+5. [Variational Dropout and the Local Reparameterization Trick](#paper-5)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -77,3 +78,11 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 * In the experiment for modelling uncertainity in regression tasks, the number of forward passes performed (i.e. 1000) may not scale well with modern neural networks calling for a more efficient approach.
 * In table 1, although the dropout results outperform the VI and PBP methods in terms of average RMSE, the average std. errors for the dropout results is higher for almost all datasets.
 * It is not mentioned how many forward passes were used to obtain the results in table 1 for the dropout method.
+
+## Paper 5: [Variational Dropout and the Local Reparameterization Trick](https://proceedings.neurips.cc/paper/2015/file/bc7316929fe1545bf0b98d114ee3ecb8-Paper.pdf) <a name="paper-5"></a>
+
+### Strengths
+
+### Improvements
+
+### Discussions points
