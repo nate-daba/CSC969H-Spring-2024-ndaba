@@ -63,8 +63,17 @@ While experimenting with the Bandits on Mushroom task, the reported number of ti
   
 ## Paper 4: [Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning](https://proceedings.mlr.press/v48/gal16.pdf) <a name="paper-4"></a>
 
+**TL;DR**: This paper presents a new way of understanding dropout, a popular neural network regularization technique, as approximate Bayesian inference in deep Gaussian processes.
+
 ### Strengths
-
+* Provides an indepth analysis of the relationship between dropout and a deep Gaussian process.
+* Supports claims such as improvements in RMSE and uncertainty estimation with results from well crafted extensive experiments.
+* Demonstrates the importance of quantifying and interpreting uncertainty. E.g. increasing standard deviation for test points far from training data in the MC dropout model on the Mauna Loa $CO_{2}$ concentrations dataset.
+  
 ### Improvements
-
+Some critical details of the algorithm are pushed to the appendix rendering the paper a bit inaccessible. For example, the approximation of a deep Gaussian process with $L$ layers and covariance function $\textbf{K}(x, y)$ by placing a variational distributions over the components of a spectral decomposition of the GPs' covraince functions was something that deserved a few lines of derivation to clarify the approximation.
+  
 ### Discussions points
+* In the experiment for modelling uncertainity in regression tasks, the number of forward passes performed (i.e. 1000) may not scale well with modern neural networks calling for a more efficient approach.
+* In table 1, although the dropout results outperform the VI and PBP methods in terms of average RMSE, the average std. errors for the dropout results is higher for almost all datasets.
+* It is not mentioned how many forward passes were used to obtain the results in table 1 for the dropout method.
