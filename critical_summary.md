@@ -86,8 +86,13 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 ### Strengths
 * The speed of the optimization from the proposed method is on the same level as a fast dropout.
 * The method also strikes a balance between flexibility (i.e. because of the flexibly parametrizied posteriors) and optimization speed.
-* 
-* 
+* Provides a simple mechanism for adaptively learning the dropout rate in response to the data.
+* Clearly dmonstrates how the local reparametrization trick leads to a more computationally efficient gradient estimator that has a lower variance compared to the regular SGVB estimator.
+* The proposed adaptive variational Gaussian dropout is simple and incurs a very negligable computational cost.
+  
 ### Improvements
+* The performance of the proposed method was tested only on simple and small datasets (i.e. MNIST and CIFAR-10) and networks (3 layer fully connected network and 2 lyaer CNN network). It would be better to test the effectiveness of the method on more diverese tasks (not just classification) and larger networks that are of practical importance.
 
 ### Discussions points
+* In the results section, in part (a) of Figure 1, we see that Variational (A) (i.e. when correlated weight noise is introduced) performs way better than Variational (B) (i.e. when independent weight noise is introduced). What is the explanation for this? Does this mean that we should always go with Variational (A) approach?
+* What is the reasoning behind the observation that downscaling the KL divergence part of the variational objective yields a better result in terms of test error other than the argument that it just prevents underfitting? 
