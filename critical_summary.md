@@ -81,8 +81,13 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 
 ## Paper 5: [Variational Dropout and the Local Reparameterization Trick](https://proceedings.neurips.cc/paper/2015/file/bc7316929fe1545bf0b98d114ee3ecb8-Paper.pdf) <a name="paper-5"></a>
 
-### Strengths
+**TL;DR**: The paper presents a local reparametriziation techniaue for reducing the varaince of stochastic gradients for variational Bayesian inference (SGVB) of a posterior over model parameters.
 
+### Strengths
+* The speed of the optimization from the proposed method is on the same level as a fast dropout.
+* The method also strikes a balance between flexibility (i.e. because of the flexibly parametrizied posteriors) and optimization speed.
+* 
+* 
 ### Improvements
 
 ### Discussions points
