@@ -9,6 +9,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 3. [Weight Uncertainty in Neural Networks](#paper-3)
 4. [Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning](#paper-4)
 5. [Variational Dropout and the Local Reparameterization Trick](#paper-5)
+6. [Deep Variational Information Bottleneck](#paper-6)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -95,4 +96,20 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 
 ### Discussions points
 * In the results section, in part (a) of Figure 1, we see that Variational (A) (i.e. when correlated weight noise is introduced) performs way better than Variational (B) (i.e. when independent weight noise is introduced). What is the explanation for this? Does this mean that we should always go with Variational (A) approach?
-* What is the reasoning behind the observation that downscaling the KL divergence part of the variational objective yields a better result in terms of test error other than the argument that it just prevents underfitting? 
+* What is the reasoning behind the observation that downscaling the KL divergence part of the variational objective yields a better result in terms of test error other than the argument that it just prevents underfitting?
+
+## Paper 6: [Deep Variational Information Bottleneck](https://arxiv.org/pdf/1612.00410.pdf) <a name="paper-6"></a>
+
+**TL;DR**: The paper presents a variational approximation to the information bottleneck (IB) by establishing a lower bound on and approximating the IB objective.
+
+### Strengths
+* Gives a good description of the original information bottleneck (IB) problem.
+* Points out the challenge of the vanilla IB principle.
+* Provides a nice formulation of variational inference to construct a lower bound on the IB objective and how to optimize it using stochastic gradient descent.
+* Demonstrates the regularizing effect of VIB by comparing with prior regularization techniques at the time.
+* Gives a good analysis of the effects of the hyperparameter $\beta$ and the embedding size $K$ on training and test performance. One interesting intution revealed by the authors is how values of $\beta$ that give best results correspond to the events where the mutula information between the stochastic encoding $Z$ and the images $X$ is between 10 to 100 bits.
+
+### Improvements
+
+### Discussions points
+* For experiments on MNIST, it is mentioned that using more than a single Monte Carlo sample of $z$ when predicting $y$ yields better results as evident from Figure 1(a). However, at how much computational cost does this benefit come compared to prior regularization methods? 
