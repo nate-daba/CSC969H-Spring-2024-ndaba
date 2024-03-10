@@ -110,6 +110,8 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 * Gives a good analysis of the effects of the hyperparameter $\beta$ and the embedding size $K$ on training and test performance. One interesting intution revealed by the authors is how values of $\beta$ that give best results correspond to the events where the mutula information between the stochastic encoding $Z$ and the images $X$ is between 10 to 100 bits.
 
 ### Improvements
+* It would be interesting to provide the reasoning for the inverted U-shape accuracy curve in Figure 6. I.e. why do we see a decline in accuracy as $\beta$ increases beyond a certain value e.g. $10^{-5}$ despite Figure 5 showing the opposite effect of increasing $\beta$ on accuracy?
+* Can there be a benefit to learning $\beta$ (e.g. performing variational inference on $\beta$) instead of just treating it as a hyperparameter?
 
 ### Discussions points
 * For experiments on MNIST, it is mentioned that using more than a single Monte Carlo sample of $z$ when predicting $y$ yields better results as evident from Figure 1(a). However, at how much computational cost does this benefit come compared to prior regularization methods? 
