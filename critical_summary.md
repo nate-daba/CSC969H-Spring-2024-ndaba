@@ -10,6 +10,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 4. [Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning](#paper-4)
 5. [Variational Dropout and the Local Reparameterization Trick](#paper-5)
 6. [Deep Variational Information Bottleneck](#paper-6)
+7. [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](#paper-7)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -114,4 +115,17 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 * Can there be a benefit to learning $\beta$ (e.g. performing variational inference on $\beta$) instead of just treating it as a hyperparameter?
 
 ### Discussions points
-* For experiments on MNIST, it is mentioned that using more than a single Monte Carlo sample of $z$ when predicting $y$ yields better results as evident from Figure 1(a). However, at how much computational cost does this benefit come compared to prior regularization methods? 
+* For experiments on MNIST, it is mentioned that using more than a single Monte Carlo sample of $z$ when predicting $y$ yields better results as evident from Figure 1(a). However, at how much computational cost does this benefit come compared to prior regularization methods?
+
+## Paper 7: [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](https://proceedings.neurips.cc/paper_files/paper/2016/file/7c9d0b1f96aebd7b5eca8c3edaa19ebb-Paper.pdf) <a name="paper-7"></a>
+
+**TL;DR**: 
+
+### Strengths
+
+
+### Improvements
+
+
+### Discussions points
+
