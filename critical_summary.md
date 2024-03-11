@@ -11,6 +11,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 5. [Variational Dropout and the Local Reparameterization Trick](#paper-5)
 6. [Deep Variational Information Bottleneck](#paper-6)
 7. [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](#paper-7)
+8. [Information Dropout: Learning Optimal Representations Through Noisy Computation](#paper-8)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -137,4 +138,21 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 * Exploring the application of InfoGAN to other types of data, such as text or audio, could reveal its versatility and potential for unsupervised learning in various domains.
 * Assessing the utility of disentangled representations learned by InfoGAN for downstream applications, including classification, regression, or reinforcement learning, could highlight the model's practical implications.
 
+## Paper 8: [Information Dropout: Learning Optimal Representations Through Noisy Computation](http://www.vision.jhu.edu/teaching/learning/deeplearning18/assets/Achille_Soatto-18.pdf) <a name="paper-8"></a>
 
+**TL;DR**: a novel approach that dynamically adjusts noise in neural network activations to improve generalization and achieve disentangled representations, connecting dropout techniques with the Information Bottleneck principle.
+
+### Strengths
+* The paper provides a robust theoretical foundation that links Information Dropout with the Information Bottleneck principle, offering insights into dropout techniques and their role in learning disentangled representations.
+* Through experiments on datasets like Cluttered MNIST and Occluded CIFAR, the paper demonstrates how Information Dropout can lead to significant improvements in generalization and robustness against nuisances.
+* It bridges critical areas in deep learning, including representation learning, information theory, and variational inference, presenting a cohesive understanding of how dropout can aid in learning optimal representations.
+
+### Improvements
+* The paper could delve deeper into the computational efficiency and scalability of Information Dropout, particularly in terms of its impact on training dynamics and resource requirements.
+* Further research comparing Information Dropout with a wider range of regularization techniques across diverse tasks and models would help validate its effectiveness and adaptability.
+* Exploring how Information Dropout performs within different neural network architectures, including recurrent and transformer models, could provide valuable insights into its versatility.
+
+### Discussion Points
+* The method's ability to achieve disentangled representations is promising, yet a more in-depth discussion on standardized evaluation metrics for disentanglement would be beneficial.
+* Information Dropout introduces a fascinating debate on the optimal balance between noise and signal in neural networks, offering a perspective on how noisy computation might mimic cognitive processes.
+* The paper's exploration of data-driven adaptability through Information Dropout invites further discussion on the parallels between neural network information processing and human cognition, potentially uncovering fundamental principles of learning and representation.
