@@ -12,6 +12,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 6. [Deep Variational Information Bottleneck](#paper-6)
 7. [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](#paper-7)
 8. [Information Dropout: Learning Optimal Representations Through Noisy Computation](#paper-8)
+9. [Auto-Encoding Variational Bayes](#paper-9)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -156,3 +157,26 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 * The method's ability to achieve disentangled representations is promising, yet a more in-depth discussion on standardized evaluation metrics for disentanglement would be beneficial.
 * Information Dropout introduces a fascinating debate on the optimal balance between noise and signal in neural networks, offering a perspective on how noisy computation might mimic cognitive processes.
 * The paper's exploration of data-driven adaptability through Information Dropout invites further discussion on the parallels between neural network information processing and human cognition, potentially uncovering fundamental principles of learning and representation.
+
+## Paper 9: [Auto-Encoding Variational Bayes](https://arxiv.org/pdf/1312.6114.pdf) <a name="paper-9"></a>
+
+**TL;DR**: The paper introduces the Stochastic Gradient Variational Bayes (SGVB) estimator and the Auto-Encoding Variational Bayes (AEVB) algorithm, which offer a new method for efficient approximate inference in complex models with intractable posterior distributions.
+
+### Strengths
+* Integrates recognition and generative models to optimize the variational lower bound with the SGVB estimator.
+* Employs the AEVB algorithm for learning parameters and inference in latent variable models using stochastic gradients.
+* Outperforms traditional methods like the wake-sleep algorithm, offering faster convergence and better optimization.
+
+### Improvements
+* Expansion to hierarchical generative models and time-series data could be further explored.
+* A deeper analysis on the scalability of the AEVB algorithm for complex and large-scale models is warranted.
+* Comparison with other variational inference techniques could be broadened and detailed.
+
+### Discussion Points
+* It seems that the need for the reparametrization trick is to also get a better gradient estimate with lower variance (i.e. SGVB) than the vanilla estimator in addition to allowing backprop through a "random" variable.
+* In the problem statement section, it is not very clear how efficient approximate marginal inference of the variable $x$ can allow us to perform inference tasks such as image denoising, and inpainting since there was no experiemnt or example showing how these tasks actually might make use of the approximate marginal.
+* Discussing the limitations and optimization potential of SGVB and AEVB with respect to large datasets.
+* Exploring the practical applications of AEVB in recognition tasks and its impact on fields like denoising and visualization.
+* Investigating the influence of different neural network architectures within the AEVB framework on the performance of recognition models.
+
+
