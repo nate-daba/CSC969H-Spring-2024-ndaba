@@ -13,6 +13,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 7. [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](#paper-7)
 8. [Information Dropout: Learning Optimal Representations Through Noisy Computation](#paper-8)
 9. [Auto-Encoding Variational Bayes](#paper-9)
+10. [Denoising Diffusion Probabilistic Models](#paper-10) 
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -178,5 +179,24 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 * Discussing the limitations and optimization potential of SGVB and AEVB with respect to large datasets.
 * Exploring the practical applications of AEVB in recognition tasks and its impact on fields like denoising and visualization.
 * Investigating the influence of different neural network architectures within the AEVB framework on the performance of recognition models.
+
+## Paper 10: [Denoising Diffusion Probabilistic Models](https://arxiv.org/pdf/2006.11239.pdf) <a name="paper-10"></a>
+
+**TL;DR**: This paper introduces high-quality image synthesis with diffusion probabilistic models, leveraging a novel connection between diffusion probabilistic models, denoising score matching, and Langevin dynamics .
+
+### Strengths
+* Demonstrates state-of-the-art image synthesis quality on various benchmarks including CIFAR10 and LSUN datasets .
+* Establishes theoretical links between diffusion models, variational inference, and denoising score matching, enhancing understanding of generative models .
+* Presents a new perspective on lossy compression through the lens of diffusion models and variational bounds .
+
+### Improvements
+* A more comprehensive study on the computational demands and scalability of the diffusion models would be beneficial .
+* Would be greate if some failure cases and the plausable reasoning behind them was provided.
+* Expanding the scope to include additional data modalities and generative model types could reveal more insights .
+
+### Discussion Points
+* The paper opens discussions on the practical implications of diffusion models in fields like data compression and creative arts .
+* There's an opportunity for discourse on how to mitigate potential biases in datasets used to train such generative models. E.g. uses in medical imaging and potential risks.
+* Broader impacts on technology and society, including the possible creation and proliferation of deepfakes, are worthy of further exploration .
 
 
