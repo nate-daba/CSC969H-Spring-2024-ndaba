@@ -14,7 +14,8 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 8. [Information Dropout: Learning Optimal Representations Through Noisy Computation](#paper-8)
 9. [Auto-Encoding Variational Bayes](#paper-9)
 10. [Denoising Diffusion Probabilistic Models](#paper-10)
-11. [Denoising Diffusion Implicit Models](#paper-10) 
+11. [Denoising Diffusion Implicit Models](#paper-11)
+12. [Score-Based Generative Modeling Through Stochastic Differential Equations](#paper-12) 
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -219,6 +220,25 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 - **Generative Modeling Evolution**: DDIMs challenge current generative modeling practices by emphasizing efficiency and determinism over stochasticity.
 - **Broader Applications**: Exploring DDIMs in contexts beyond image generation, such as data compression and unsupervised learning, could uncover new utilities.
 - **Future Research Directions**: Investigating the integration with continuous-time models like Neural ODEs could enhance DDIMs' efficiency and flexibility further.
+
+## Paper 12: [Score-Based Generative Modeling Through Stochastic Differential Equations](https://arxiv.org/pdf/2011.13456.pdf) <a name="paper-12"></a>
+
+**TL;DR**: Introduces a framework using stochastic differential equations (SDEs) for score-based generative modeling, providing a unified view on existing models and introducing new sampling procedures, exact likelihood computation, and controllable generation.
+
+### Strengths
+- **Unified Framework**: Offers a comprehensive framework that generalizes previous score-based and diffusion probabilistic models.
+- **Efficiency and Quality**: Enables exact likelihood computation, efficient sampling, and high-fidelity image generation.
+- **Controllable Generation**: Demonstrates controllable generation abilities like class-conditional generation and inpainting without re-training.
+
+### Improvements
+- **Sampling Speed**: Although improvements are noted, sampling speed remains slower compared to GANs, indicating room for efficiency enhancements.
+- **Complexity and Hyperparameters**: The broad range of samplers introduced adds complexity and necessitates tuning a large number of hyperparameters.
+- **Theoretical Understanding**: Deepens the theoretical understanding of SDEs in generative modeling but suggests further exploration, especially in understanding the stability and dynamics of reverse SDEs.
+
+### Discussion Points
+- **Integrating with GANs**: Investigating ways to combine the model's stable learning framework with the fast sampling capabilities of GANs.
+- **Hyperparameter Optimization**: Developing methods for automatic selection and tuning of the introduced samplers' hyperparameters.
+- **Broader Applicability**: Exploring the framework's potential in domains beyond image generation, such as audio synthesis or 3D shape generation.
 
 
 
