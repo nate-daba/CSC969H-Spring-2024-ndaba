@@ -13,7 +13,8 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 7. [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](#paper-7)
 8. [Information Dropout: Learning Optimal Representations Through Noisy Computation](#paper-8)
 9. [Auto-Encoding Variational Bayes](#paper-9)
-10. [Denoising Diffusion Probabilistic Models](#paper-10) 
+10. [Denoising Diffusion Probabilistic Models](#paper-10)
+11. [Denoising Diffusion Implicit Models](#paper-10) 
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -198,5 +199,26 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 * The paper opens discussions on the practical implications of diffusion models in fields like data compression and creative arts .
 * There's an opportunity for discourse on how to mitigate potential biases in datasets used to train such generative models. E.g. uses in medical imaging and potential risks.
 * Broader impacts on technology and society, including the possible creation and proliferation of deepfakes, are worthy of further exploration .
+
+## Paper 11: [Denoising Diffusion Implicit Models](https://arxiv.org/pdf/2010.02502.pdf?trk=cndc-detail) <a name="paper-11"></a>
+
+**TL;DR**: Introduces Denoising Diffusion Implicit Models (DDIMs), an efficient class of generative models that significantly accelerates the sampling process of Denoising Diffusion Probabilistic Models (DDPMs) without compromising sample quality, allowing for deterministic generation and high-quality reconstruction from latent space.
+
+### Strengths
+- **Efficiency**: Demonstrates up to 50x faster sampling compared to DDPMs, offering a significant improvement in computational efficiency.
+- **Quality and Consistency**: Maintains high sample quality with much fewer generation steps and ensures consistency in generated samples when varying the sampling trajectory length.
+- **Flexibility**: Provides the flexibility to trade-off between computation and sample quality effectively and supports semantically meaningful image interpolation directly in latent space.
+- **Reconstruction**: Unlike DDPMs, DDIMs allow for accurate reconstruction of observations from their latent representations, highlighting its potential for broader applications beyond sample generation.
+
+### Improvements
+- **Theoretical Grounding**: While promising, the theoretical understanding of why DDIMs can efficiently reduce the number of sampling steps without losing generative performance compared to DDPMs could be further developed.
+- **Diversity in Applications**: Exploring and demonstrating the efficacy of DDIMs across a wider range of datasets and domains beyond image generation can further validate its versatility.
+- **Comparison with Other Models**: A more extensive comparison with other state-of-the-art generative models, including GANs and Variational Autoencoders, in terms of sample quality, efficiency, and use cases, could provide a clearer positioning of DDIMs.
+
+### Discussion Points
+- **Generative Modeling Evolution**: DDIMs challenge current generative modeling practices by emphasizing efficiency and determinism over stochasticity.
+- **Broader Applications**: Exploring DDIMs in contexts beyond image generation, such as data compression and unsupervised learning, could uncover new utilities.
+- **Future Research Directions**: Investigating the integration with continuous-time models like Neural ODEs could enhance DDIMs' efficiency and flexibility further.
+
 
 
