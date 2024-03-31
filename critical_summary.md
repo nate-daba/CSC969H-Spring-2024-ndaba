@@ -15,7 +15,8 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 9. [Auto-Encoding Variational Bayes](#paper-9)
 10. [Denoising Diffusion Probabilistic Models](#paper-10)
 11. [Denoising Diffusion Implicit Models](#paper-11)
-12. [Score-Based Generative Modeling Through Stochastic Differential Equations](#paper-12) 
+12. [Score-Based Generative Modeling Through Stochastic Differential Equations](#paper-12)
+13. [Implicit Generation and Modeling with Energy-Based Models](#paper-13)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -239,6 +240,27 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 - **Integrating with GANs**: Investigating ways to combine the model's stable learning framework with the fast sampling capabilities of GANs.
 - **Hyperparameter Optimization**: Developing methods for automatic selection and tuning of the introduced samplers' hyperparameters.
 - **Broader Applicability**: Exploring the framework's potential in domains beyond image generation, such as audio synthesis or 3D shape generation.
+
+## Paper 13: [Implicit Generation and Modeling with Energy-Based Models](https://proceedings.neurips.cc/paper/2019/file/378a063b8fdb1db941e34f4bde584c7d-Paper.pdf) <a name="paper-13"></a>
+
+**TL;DR**: The paper introduces a scalable method for training energy-based models (EBMs) using Markov Chain Monte Carlo (MCMC) on high-dimensional data, achieving competitive performance in sample generation, inpainting, and out-of-distribution classification.
+
+### Strengths
+- EBMs generate high-fidelity images, rivaling GANs, and show no mode collapse.
+- The paper demonstrates EBMs' versatility in tasks such as out-of-distribution detection, adversarial robustness, and inpainting.
+- Introduces efficient training strategies for EBMs, making them applicable to complex, high-dimensional datasets.
+
+### Improvements
+- Sampling efficiency, particularly in high dimensions, could be improved to reduce computational demands.
+- Extensive benchmarking across more varied datasets could solidify the model's performance claims.
+- More profound theoretical insights into the working of Langevin dynamics within EBMs could enhance the interpretability of the model.
+
+### Discussion Points
+- Future work could explore latent space learning with EBMs for more complex generative tasks.
+- Detailed comparisons with state-of-the-art GANs and VAEs could highlight the unique advantages and limitations of EBMs.
+- Assessing the impact of EBMs on real-world problems would demonstrate their practical utility beyond academic benchmarks.
+
+
 
 
 
