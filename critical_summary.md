@@ -17,6 +17,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 11. [Denoising Diffusion Implicit Models](#paper-11)
 12. [Score-Based Generative Modeling Through Stochastic Differential Equations](#paper-12)
 13. [Implicit Generation and Modeling with Energy-Based Models](#paper-13)
+14. [How to Train Your Energy-Based Models](#paper-14)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -260,6 +261,26 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 - Detailed comparisons with state-of-the-art GANs and VAEs could highlight the unique advantages and limitations of EBMs.
 - Assessing the impact of EBMs on real-world problems would demonstrate their practical utility beyond academic benchmarks.
 
+## Paper 14: [How to Train Your Energy-Based Models](https://arxiv.org/pdf/2101.03288.pdf) <a name="paper-14"></a>
+
+**TL;DR**: This paper provides a comprehensive tutorial on training energy-based models (EBMs), detailing techniques including MCMC, Score Matching, Noise Contrastive Estimation, and outlining their theoretical connections and practical considerations.
+
+### Strengths
+- **Comprehensive Overview**: Offers a thorough and useful explanation of EBM training techniques.
+- **Theoretical Depth**: Explores the theoretical foundations of EBMs and the relationships between different training methods.
+- **Practical Guidance**: Provides practical advice on implementation and addresses challenges in training EBMs.
+- **Broad Applicability**: Discusses a variety of applications where EBMs are advantageous due to their flexibility and expressive power.
+
+### Improvements
+- **Complexity**: The intricacy of EBM training methods may be daunting for practitioners new to the field.
+- **Computational Demands**: Some discussed methods require significant computational resources, especially for high-dimensional data.
+- **Implementation Challenges**: While the paper guides the reader through training EBMs, actual implementation and tuning could be non-trivial.
+
+### Discussion Points
+- **Scalability**: How can the scalability of EBM training methods be improved for real-world, high-dimensional datasets?
+- **Sample Efficiency**: Investigating ways to increase sample efficiency during the training and inference of EBMs could be valuable since even the most sample-efficient EBMs are significantly slower than Generative Adversarial Networks (GANs) to generate samples. 
+- **Comparison with Other Models**: A direct comparison of the performance and efficiency of EBMs against other model types would be useful.
+- **Future Research Directions**: Further exploration of MCMC-free approaches to training EBMs could provide insights into more efficient algorithms.
 
 
 
