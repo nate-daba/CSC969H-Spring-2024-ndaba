@@ -18,6 +18,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 12. [Score-Based Generative Modeling Through Stochastic Differential Equations](#paper-12)
 13. [Implicit Generation and Modeling with Energy-Based Models](#paper-13)
 14. [How to Train Your Energy-Based Models](#paper-14)
+15. [Variational Bayesian Optimal Experimental Design](#paper-15)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -281,6 +282,27 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 - **Sample Efficiency**: Investigating ways to increase sample efficiency during the training and inference of EBMs could be valuable since even the most sample-efficient EBMs are significantly slower than Generative Adversarial Networks (GANs) to generate samples. 
 - **Comparison with Other Models**: A direct comparison of the performance and efficiency of EBMs against other model types would be useful.
 - **Future Research Directions**: Further exploration of MCMC-free approaches to training EBMs could provide insights into more efficient algorithms.
+
+## Paper 15: [Variational Bayesian Optimal Experimental Design](https://proceedings.neurips.cc/paper_files/paper/2019/file/d55cbf210f175f4a37916eafe6c04f0d-Paper.pdf) <a name="paper-15"></a>
+
+**TL;DR**: The paper advances the field of Bayesian optimal experimental design by proposing variational methods for efficient estimation of expected information gain, making the design process more practical for complex, high-dimensional models.
+
+### Strengths
+- Provides a more practical and computationally efficient approach to estimate the expected information gain (EIG) for complex experimental designs.
+- Establishes a strong theoretical foundation with proven convergence rates and robustness in the variational approach to EIG estimation.
+- Introduces the concept of amortizing intractable computations in EIG estimation, which is novel in the context of experimental design.
+
+### Improvements
+- Some variational estimators can converge to biased estimates if the variational family does not contain the target distribution.
+- The accuracy of the EIG estimation is contingent upon the choice of the variational family.
+- Although improvements are made, challenges remain in models where the parameter space or outcome space is very high-dimensional.
+
+### Discussion Points
+- Future work could focus on improving scalability and reducing computational costs further, particularly for very high-dimensional parameter spaces.
+- Investigating the use of richer variational families that can capture the true posterior more accurately would be beneficial.
+- Explores how these variational estimators can be integrated into a real-time adaptive sequential experimental design framework, showcasing practical applications.
+- Provides empirical benchmarks against existing methods, showing improvements in terms of bias and variance in estimated EIG across various designs.
+
 
 
 
