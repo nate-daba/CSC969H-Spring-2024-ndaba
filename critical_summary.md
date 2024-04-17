@@ -19,6 +19,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 13. [Implicit Generation and Modeling with Energy-Based Models](#paper-13)
 14. [How to Train Your Energy-Based Models](#paper-14)
 15. [Variational Bayesian Optimal Experimental Design](#paper-15)
+16. [On Variational Bounds of Mutual Information](#paper-16)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -303,7 +304,24 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 - Explores how these variational estimators can be integrated into a real-time adaptive sequential experimental design framework, showcasing practical applications.
 - Provides empirical benchmarks against existing methods, showing improvements in terms of bias and variance in estimated EIG across various designs.
 
+## Paper 16: [On Variational Bounds of Mutual Information](https://proceedings.mlr.press/v97/poole19a/poole19a.pdf) <a name="paper-16"></a>
 
+**TL;DR**: The paper develops a continuum of variational lower bounds for mutual information, which provides a trade-off between bias and variance, improving estimation in high-dimensional settings.
 
+### Strengths
+- Introduces a framework that integrates existing variational bounds into a continuum, improving flexibility.
+- Empirical evaluations demonstrate improved bias-variance trade-offs compared to previous bounds.
+- Provides a thorough theoretical grounding with proofs for new and existing bounds.
+- Useful in practical applications like representation learning, where mutual information is maximized.
 
+### Improvements
+- Although improvements on bias and variance are noted, some bounds still show high variance or require large sample sizes.
+- The paper primarily focuses on theoretical aspects, with limited real-world applications or datasets to demonstrate practical utility.
+- Dependencies on batch sizes and specific parameter settings may limit broader applicability.
+- Could explore more on the computational efficiency of implementing these bounds in practice.
 
+### Discussion Points
+- How might the new continuum of bounds impact other areas of machine learning beyond representation learning?
+- What are potential ways to reduce the dependency on large sample sizes?
+- Could these approaches be adapted or extended to other types of data beyond the high-dimensional types discussed?
+- Discussion on the balance between theoretical optimality and practical implementation challenges in mutual information estimation.
