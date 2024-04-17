@@ -1,6 +1,6 @@
 # Paper Summaries for CSC696H: Probabilistic Methods in Machine Learning
 
-This is a collection of summary notes for papers assigned as weekly readings from the course CSC696H: Probabilistic Methods in ML, taught by [Prof. Jason Pacheco](http://www.pachecoj.com/) in Spring 2024. The purpose of these summaries is to critically engage with the material, demonstrating an understanding and critique of the papers.
+This is a collection of critical summary notes for papers assigned as weekly readings from the course CSC696H: Probabilistic Methods in ML, taught by [Prof. Jason Pacheco](http://www.pachecoj.com/) in Spring 2024. The purpose of these summaries is to critically engage with the material, demonstrating an understanding and critique of the papers.
 
 ## Content
 
@@ -20,6 +20,7 @@ This is a collection of summary notes for papers assigned as weekly readings fro
 14. [How to Train Your Energy-Based Models](#paper-14)
 15. [Variational Bayesian Optimal Experimental Design](#paper-15)
 16. [On Variational Bounds of Mutual Information](#paper-16)
+17. [Mutual Information Neural Estimation](#paper-17)
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -325,3 +326,26 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 - What are potential ways to reduce the dependency on large sample sizes?
 - Could these approaches be adapted or extended to other types of data beyond the high-dimensional types discussed?
 - Discussion on the balance between theoretical optimality and practical implementation challenges in mutual information estimation.
+
+## Paper 17: [Mutual Information Neural Estimation](https://proceedings.mlr.press/v80/belghazi18a/belghazi18a.pdf) <a name="paper-17"></a>
+
+**TL;DR**: The paper introduces MINE, a neural network-based approach to efficiently estimate mutual information across high-dimensional variables, enhancing flexibility and scalability in various applications.
+
+### Strengths
+- Introduces MINE, a scalable and flexible neural estimator for mutual information, trainable via backpropagation.
+- Demonstrates applicability in minimizing mode collapse in GANs and implementing the Information Bottleneck in continuous settings.
+- Enhances mutual information estimation in terms of speed and scalability compared to traditional methods.
+- Provides substantial theoretical analysis, proving the estimator's consistency and effectiveness.
+
+### Improvements
+- Some experiments lacked deeper exploration into the limits of the estimator across more diverse datasets.
+- The estimator's performance might depend heavily on the chosen network architecture and hyperparameters.
+- Further work is needed to reduce potential biases in stochastic gradient estimates used during training.
+- Could benefit from additional comparisons with other state-of-the-art mutual information estimation techniques.
+
+### Discussion Points
+- How does MINE compare to other recent advances in neural estimation of mutual information, especially in non-image data?
+- Potential for MINE to impact other areas of machine learning, such as reinforcement learning and unsupervised learning.
+- Would be greate if the implications of the estimator's dependency on sample size and dimensionality for practical applications is discussed as well.
+- Future enhancements could focus on optimizing computational efficiency and exploring different neural network architectures.
+
