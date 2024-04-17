@@ -22,6 +22,7 @@ This is a collection of critical summary notes for papers assigned as weekly rea
 16. [On Variational Bounds of Mutual Information](#paper-16)
 17. [Mutual Information Neural Estimation](#paper-17)
 18. [Deep Adaptive Design: Amortizing Sequential Bayesian Experimental Design](#paper-18)
+19. [Representation Learning with Contrastive Predictive Coding](#paper-19)
 
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
@@ -372,3 +373,22 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 - Potential for integration with other machine learning techniques to further optimize design decisions.
 - Future work could look into reducing the reliance on large sample sizes for training the design network.
 
+## Paper 19: [Representation Learning with Contrastive Predictive Coding](https://arxiv.org/pdf/1807.03748.pdf) <a name="paper-19"></a>
+
+**TL;DR**: Introduces Contrastive Predictive Coding (CPC), a universal unsupervised learning method to extract useful representations by predicting future data in latent space across various domains like speech, images, and text.
+
+### Strengths
+- Proposes a novel approach for unsupervised learning that is applicable across different data types, including speech, images, text, and reinforcement learning scenarios.
+- Utilizes Noise-Contrastive Estimation (NCE) for effective training of deep learning models without needing labeled data.
+- Demonstrates significant improvements over other unsupervised learning methods in a variety of benchmarks.
+- Provides a robust framework that captures complex dependencies in data through future prediction in latent space.
+
+### Improvements
+- While CPC shows promising results, the complexity of tuning and the need for large datasets may limit its accessibility and practicality for smaller projects or datasets.
+- The paper could explore the impact of different types of noise data on the quality of the learned representations.
+- Further research could enhance the scalability and efficiency of the training process, particularly in terms of computational resources.
+
+### Discussion Points
+- Potential for CPC in real-world applications beyond the experimental settings, such as industrial diagnostics or real-time anomaly detection.
+- The adaptability of CPC to integrate with newer or more complex neural network architectures that could improve predictive capabilities.
+- Exploration of the limitations of CPC when applied to highly noisy or unstructured data environments.
