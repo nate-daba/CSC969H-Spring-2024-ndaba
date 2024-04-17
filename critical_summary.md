@@ -21,6 +21,8 @@ This is a collection of critical summary notes for papers assigned as weekly rea
 15. [Variational Bayesian Optimal Experimental Design](#paper-15)
 16. [On Variational Bounds of Mutual Information](#paper-16)
 17. [Mutual Information Neural Estimation](#paper-17)
+18. [Deep Adaptive Design: Amortizing Sequential Bayesian Experimental Design](#paper-18)
+
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
 
@@ -348,4 +350,25 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 - Potential for MINE to impact other areas of machine learning, such as reinforcement learning and unsupervised learning.
 - Would be greate if the implications of the estimator's dependency on sample size and dimensionality for practical applications is discussed as well.
 - Future enhancements could focus on optimizing computational efficiency and exploring different neural network architectures.
+
+## Paper 18: [Deep Adaptive Design: Amortizing Sequential Bayesian Experimental Design](https://proceedings.mlr.press/v139/foster21a/foster21a.pdf) <a name="paper-18"></a>
+
+**TL;DR**: Introduces Deep Adaptive Design (DAD), a method that enables rapid sequential Bayesian experimental design by training a neural network to make design decisions in real-time, significantly reducing computational overhead.
+
+### Strengths
+- Innovative use of neural networks to reduce the computational cost of Bayesian experimental design, allowing real-time application.
+- Demonstrates significant improvements in efficiency and scalability over traditional methods.
+- Employs contrastive information bounds for effective training of the network without direct posterior estimation.
+- Applicable to a wide range of fields such as epidemiology, physics, and psychology due to its adaptive nature.
+
+### Improvements
+- Potential bias in stochastic gradient estimates used during training could impact the robustness of the design decisions.
+- More extensive testing across diverse experimental settings could validate the general applicability.
+- Could benefit from further reduction in computational demands for very large-scale applications.
+- The approach assumes independence of experiments which might not hold in certain complex scenarios.
+
+### Discussion Points
+- Exploring the impact of incorporating more complex and interdependent models within the DAD framework.
+- Potential for integration with other machine learning techniques to further optimize design decisions.
+- Future work could look into reducing the reliance on large sample sizes for training the design network.
 
