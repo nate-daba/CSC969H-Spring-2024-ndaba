@@ -23,6 +23,7 @@ This is a collection of critical summary notes for papers assigned as weekly rea
 17. [Mutual Information Neural Estimation](#paper-17)
 18. [Deep Adaptive Design: Amortizing Sequential Bayesian Experimental Design](#paper-18)
 19. [Representation Learning with Contrastive Predictive Coding](#paper-19)
+20. [Modern Bayesian Experimental Design](#paper-20)
 
 
 ## Paper 1: [Approximate Bayesian Computation (ABC)](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002803&type=printable) <a name="paper-1"></a>
@@ -392,3 +393,23 @@ Some critical details of the algorithm are pushed to the appendix rendering the 
 - Potential for CPC in real-world applications beyond the experimental settings, such as industrial diagnostics or real-time anomaly detection.
 - The adaptability of CPC to integrate with newer or more complex neural network architectures that could improve predictive capabilities.
 - Exploration of the limitations of CPC when applied to highly noisy or unstructured data environments.
+
+## Paper 20: [Modern Bayesian Experimental Design](https://projecteuclid.org/journals/statistical-science/volume-39/issue-1/Modern-Bayesian-Experimental-Design/10.1214/23-STS915.full) <a name="paper-20"></a>
+
+**TL;DR**: The paper reviews advancements in Bayesian experimental design (BED), emphasizing modern computational approaches that enhance its practical deployment across various scientific fields.
+
+### Strengths
+- Provides a comprehensive overview of the state-of-the-art techniques in Bayesian experimental design, highlighting their practical applications .
+- Discusses the integration of advanced computational methods, like deep learning and approximate Bayesian computation, which overcome traditional computational bottlenecks .
+- Highlights successful applications in diverse fields such as psychology, neuroscience, and engineering, showcasing BED's versatility .
+
+### Improvements
+- Some sections could benefit from more detailed examples of BED applications in real-world scenarios to enhance practical understanding .
+- The discussion on computational challenges could be expanded to include more recent developments in computational techniques .
+- Future editions could explore more on the implications of BED in emerging areas like machine learning and artificial intelligence .
+
+### Discussion Points
+- Potential for broader integration of BED with cutting-edge machine learning models to further automate and optimize experimental designs .
+- Exploration of BED's role in ethical considerations and data privacy, especially in fields handling sensitive information .
+- Discussion on the scalability of BED approaches to handle increasingly complex experimental setups in various scientific domains .
+
